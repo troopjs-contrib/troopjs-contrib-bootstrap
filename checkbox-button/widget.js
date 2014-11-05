@@ -8,14 +8,17 @@ define([ "troopjs-dom/component/widget" ], function (Widget) {
 				.closest("label")
 				.next("button")
 				.toggleClass("active", active);
+
 		},
 
 		"dom:button/click": function ($event) {
-			$($event.target)
+			var $input = $($event.target)
 				.prev("label")
-				.click();
+				.find("input");
 
-			return false;
+			$input
+				.prop("checked", !$input.prop("checked"))
+				.change();
 		}
 	});
 });
