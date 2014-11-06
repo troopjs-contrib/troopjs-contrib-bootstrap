@@ -23,11 +23,12 @@ define([ "troopjs-dom/component/widget" ], function (Widget) {
 		},
 
 		"dom:a/click": function ($event) {
-			$($event.target)
-				.prev("label")
-				.click();
-
-			return false;
+			var $input = $($event.target)
+					.prev("label")
+					.find("input");
+			$input
+				.prop("checked", !$input.prop("checked"))
+				.change();
 		}
 	});
 });
