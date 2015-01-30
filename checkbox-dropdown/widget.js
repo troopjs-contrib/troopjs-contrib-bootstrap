@@ -17,7 +17,8 @@ define([ "troopjs-dom/component/widget" ], function (Widget) {
 				.closest("li")
 				.toggleClass("active", active)
 				.closest("ul")
-				.prev("button")
+				.prevAll("button")
+				.last()
 				.find(".value")
 				.text(text);
 		},
