@@ -25,5 +25,6 @@
     "when": "3.4.4",
     "requirejs": ">=2.1.14",
     "requirejs-text": "~2.0.12"
-  }
+  },
+  "version": "1.0.4"
 }
